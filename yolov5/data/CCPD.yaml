@@ -1,0 +1,4 @@
+train: data/ccpd_base_sample/train/images
+val: data/ccpd_base_sample/val/images
+nc: 1
+names: ['0']
