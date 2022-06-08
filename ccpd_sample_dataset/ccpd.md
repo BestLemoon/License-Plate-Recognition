@@ -10,3 +10,7 @@ It includes about 4000 license plates from CCPD dataset.
 - CCPD-db:204
 - CCPD-fn:204
 - CCPD-rotate:102
+
+# 2022.6.8
+
+Update Dataset, now we used ONLY CCPD-base to train the model, you can download the dataset in the release, it contains 1w random sample image from the origin datasets. Enjoy it  :) 
