@@ -12,7 +12,13 @@ pip install -r requirements.txt
 - Run Train with this command
 
   ```bash
-  python train.py --img 736 --batch 16 --epochs 32 --data /path/to/data.yml --weights /path/to/weight.pt --cache
+  python3 train.py 
+  --img 736 
+  --batch 16 
+  --epochs 32 
+  --data /path/to/data.yml 
+  --weights /path/to/weight.pt 
+  --cache
   ```
 
 ## Dataset
@@ -37,14 +43,15 @@ We have chosen [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) to recogni
 ## Model Trainning
 
 ```shell
-python3 tools/train.py -c configs/rec/ch_PP-OCRv2/ch_PP-OCRv2_rec.yml -o Global.pretrained_model=pretrained_model/ch_PP-OCRv2_rec_train/best_accuracy
+python3 tools/train.py 
+-c configs/rec/ch_PP-OCRv2/ch_PP-OCRv2_rec.yml 
+-o Global.pretrained_model=pretrained_model/ch_PP-OCRv2_rec_train/best_accuracy
 ```
 
 ## Infer
 
 ```shell
-python tools/infer/predict_rec.py --image_dir="./test_data/" --rec_model_dir="./inference/" --rec_image_shape="3, 32, 320" --rec_char_dict_path
-="./word_dict.txt"
+python3 tools/infer/predict_rec.py 
 ```
 
 > Please create the test_data folder yourself before run the model infer.
