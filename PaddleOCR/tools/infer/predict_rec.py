@@ -11,6 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+import imp
 import os
 import sys
 from PIL import Image
@@ -19,7 +20,7 @@ sys.path.append(__dir__)
 sys.path.insert(0, os.path.abspath(os.path.join(__dir__, '../..')))
 
 os.environ["FLAGS_allocator_strategy"] = 'auto_growth'
-
+import argparse
 import cv2
 import numpy as np
 import math
@@ -437,6 +438,12 @@ def main(args):
     if args.benchmark:
         text_recognizer.autolog.report()
 
-
+def inference():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--image_dir",default='PaddleOCR\\test_data',type=str)
+    parser.add_argument("--rec_model_dir",default='PaddleOCR\\inference',type=str)
+    parser.add_argument("--rec_image_shape", default='3,32,320',type=str)
+    parser.add_argument("--rec_char_dict_path",default='PaddleOCR\\word_dict.txt',type=str)
+    main(parser.parse_args())
 if __name__ == "__main__":
-    main(utility.parse_args())
+    inference()
