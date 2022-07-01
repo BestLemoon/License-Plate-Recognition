@@ -21,6 +21,7 @@ class Ui_Form(object):
         font.setPointSize(10)
         Form.setFont(font)
         Form.setStyleSheet("")
+        Form.setWindowIcon(QtGui.QIcon("../mr/logo.ico"))
         self.src_ph = QtWidgets.QPushButton(Form)
         self.src_ph.setGeometry(QtCore.QRect(150, 30, 288, 464))
         self.src_ph.setText("")

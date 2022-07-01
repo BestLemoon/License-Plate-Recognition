@@ -1,0 +1,1 @@
+cut.py is still problematic for some images. This can be modified in yolov5/run.py to remove the display of split images, which will not affect the recognition of license plates later.

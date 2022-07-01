@@ -50,11 +50,12 @@ python3 tools/train.py
 
 ## Infer
 
-```shell
-python3 tools/infer/predict_rec.py 
+```
+python3 yolov5/run.py
 ```
 
-> Please create the test_data folder yourself before run the model infer.
+> We created the interface using pyqt5 and modified predict_rec.py and utility.py in the reg/PaddleOCR/tools/infer folder. If you need to execute commands in the terminal, download the original code from the PaddleOCR official website and execute:
+> python3 tools/infer/predict_rec.py 
 
 ## References
 
